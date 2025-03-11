@@ -5,6 +5,17 @@
     {
       "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mertt\\Desktop\\LearnOpenGL-master\\src\\1.getting_started\\2.1.hello_triangle\\hello_triangle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\default.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:default.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\default.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:default.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +25,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "default.frag",
+              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\default.frag",
+              "RelativeDocumentMoniker": "default.frag",
+              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\default.frag",
+              "RelativeToolTip": "default.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-11T19:20:35.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "default.vert",
+              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\default.vert",
+              "RelativeDocumentMoniker": "default.vert",
+              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\default.vert",
+              "RelativeToolTip": "default.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-11T19:02:47.42Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,9 +61,43 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAACwAAAAAAAAAAAAIwDUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAQwIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-11T17:35:42.56Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "66136c40-3d8e-4111-981c-1fd2b956bc98",
+        "Display": 0,
+        "X": 704,
+        "Y": 128,
+        "Width": 578,
+        "Height": 574,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "hello_triangle.cpp",
+              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\LearnOpenGL-master\\src\\1.getting_started\\2.1.hello_triangle\\hello_triangle.cpp",
+              "RelativeDocumentMoniker": "..\\..\\LearnOpenGL-master\\src\\1.getting_started\\2.1.hello_triangle\\hello_triangle.cpp",
+              "ToolTip": "C:\\Users\\mertt\\Desktop\\LearnOpenGL-master\\src\\1.getting_started\\2.1.hello_triangle\\hello_triangle.cpp",
+              "RelativeToolTip": "..\\..\\LearnOpenGL-master\\src\\1.getting_started\\2.1.hello_triangle\\hello_triangle.cpp",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAG8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-11T19:42:47.423Z",
               "EditorCaption": ""
             }
           ]
