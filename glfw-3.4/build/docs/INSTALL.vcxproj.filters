@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\mertt\Desktop\OpenGlProject\glfw-3.4\build\CMakeFiles\2e32b12471e92054d1b4b53104b6350d\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EB309900-C95C-3798-846A-637AB70CBD5C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
