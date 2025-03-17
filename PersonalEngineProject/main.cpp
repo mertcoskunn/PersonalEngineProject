@@ -8,6 +8,13 @@
 #include<sstream>
 #include<cerrno>
 
+#include"Shader.h"
+#include"VBO.h"
+#include"VAO.h"
+#include"InputSystem.h"
+#include"MovementSystem.h"
+
+
 
 
 const unsigned int windowWidth = 800;
@@ -17,7 +24,6 @@ const char windowName[] = "MainWindow";
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height); 
 
-std::string get_file_contents(const char* filename);
 
 
 float vertices[] = {
@@ -43,101 +49,61 @@ int main() {
 		return -1; 
 
 	}
+	
 	// Adjust current context 
 	glfwMakeContextCurrent(window); 
 
+	
 	// Check GLAD 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
 
 		std::cout << "Failed to initialize GLAD" << std::endl;
 		return -1; 
 	}
-
+	
 	// Set gl viewport 
 	glViewport(0, 0, windowWidth, windowHeight);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback); 
 
 	
+	Shader shader1("default.vert", "default.frag");
+	
+	VAO VAO1;
+	VBO VBO1(vertices, sizeof(vertices));
+
+	VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 3 * sizeof(float), (void*)0);
+	VAO1.Bind();
+
+	VAO1.Unbind();
+	VBO1.Unbind();
 
 
-	// This part reads the content of shader files
-	std::string vertexCode = get_file_contents("default.vert"); 
-	const char* vertexSource = vertexCode.c_str();
+	std::vector<int> keys = {GLFW_KEY_W, GLFW_KEY_S, GLFW_KEY_A, GLFW_KEY_D};
 
-	std::string fragmentCode = get_file_contents("default.frag");
-	const char* fragmentSource = fragmentCode.c_str();
-
-
-	// Shader objects are created
-	unsigned int vertexShader;
-	vertexShader = glCreateShader(GL_VERTEX_SHADER); 
-	glShaderSource(vertexShader, 1, &vertexSource, NULL);
-	glCompileShader(vertexShader); 
-
-	unsigned int fragmentShader; 
-	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-	glShaderSource(fragmentShader, 1, &fragmentSource, NULL);
-	glCompileShader(fragmentShader); 
+	InputSystem inputs(keys);
+	inputs.setIsEnabled(true);
+	inputs.setupKeyInputs(window);
 
 
-	// Checked for shader compilation error. 
-	int success;
-	char infoLog[512];
-	glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success); 
-
-	if (!success)
-	{
-		glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-		std::cout << "ERROR::SHADER:VERTEX:COMPILATION_FAILED\n" << infoLog << std::endl;
-
-	}
-
-	glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-
-	if (!success)
-	{
-		glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-		std::cout << "ERROR::SHADER:FRAGMENT:COMPILATION_FAILED\n" << infoLog << std::endl;
-
-	}
-
-	// Created shader program
-	unsigned int shaderProgram;
-	shaderProgram = glCreateProgram();
-	glAttachShader(shaderProgram, vertexShader);
-	glAttachShader(shaderProgram, fragmentShader);
-	glLinkProgram(shaderProgram);
-
-	glDeleteShader(vertexShader);
-	glDeleteShader(fragmentShader); 
-
-
-
-	// Created VAO and VBO 
-	unsigned int VBO,VAO;
-	glGenVertexArrays(1, &VAO);
-	glGenBuffers(1, &VBO);
-
-	glBindVertexArray(VAO);
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glBindVertexArray(0);
-
-
+	MovementSystem movementInputs(&inputs); 
+	
+	std::vector<int> mov = { 0,0,0,0 };
 
 	while (!glfwWindowShouldClose(window)) {
 		
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
+		if (inputs.getIsKeyDown(GLFW_KEY_W)) {
+			mov = movementInputs.getMovementDirections();
+			std::cout << mov[0]<<" "<<mov[1] << " " << mov[2] << " " << mov[3] << "\n";
+		
+		}
+		
+
 		// Used program and drawed first triangle 
-		glUseProgram(shaderProgram);
-		glBindVertexArray(VAO);
+		shader1.Activate();
+		VAO1.Bind();
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 
 		glfwSwapBuffers(window);
@@ -148,6 +114,9 @@ int main() {
 	}
 
 	// Clean/delete all of GLFW's resources 
+	shader1.Delete();
+	VBO1.Delete();
+	VAO1.Delete();
 	glfwTerminate();
 	return 0; 
 
@@ -164,20 +133,5 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 }
 
 
-std::string get_file_contents(const char* filename)
-{
-	std::ifstream in(filename, std::ios::binary);
-	if (in)
-	{
-		std::string contents;
-		in.seekg(0, std::ios::end);
-		contents.resize(in.tellg());
-		in.seekg(0, std::ios::beg);
-		in.read(&contents[0], contents.size());
-		in.close();
-		return(contents);
 
-	}
 
-	throw(errno);
-}
