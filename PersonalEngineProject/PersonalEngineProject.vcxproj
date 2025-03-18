@@ -141,6 +141,7 @@
     <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MovementSystem.cpp" />
+    <ClCompile Include="ActorObject.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="StaticMesh.cpp" />
     <ClCompile Include="VAO.cpp" />
@@ -153,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="InputSystem.h" />
     <ClInclude Include="MovementSystem.h" />
+    <ClInclude Include="ActorObject.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="StaticMesh.h" />
     <ClInclude Include="VAO.h" />

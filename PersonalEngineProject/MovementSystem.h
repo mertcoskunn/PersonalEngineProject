@@ -6,13 +6,14 @@
 class MovementSystem {
 
 public: 
-	MovementSystem(InputSystem* inputs);
+	MovementSystem(InputSystem& inputs);
 	std::vector<int> getMovementDirections(); 
 	bool getIsEnabled() const { return _isEnabled; }; 
 	void setIsEnabled(bool val) { _isEnabled = val; };
+
 private: 
 	bool _isEnabled;
-	InputSystem* _inputs; 
+	InputSystem& _inputs; 
 };
 
 #endif 
