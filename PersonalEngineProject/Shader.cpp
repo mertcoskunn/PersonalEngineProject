@@ -66,6 +66,7 @@ GLuint Shader::getID(){
 void Shader::Activate() {
 
 	glUseProgram(ID);
+	
 }
 
 void Shader::Delete() {

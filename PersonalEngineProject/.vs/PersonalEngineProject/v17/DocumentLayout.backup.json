@@ -7,20 +7,32 @@
       "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\MovementSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:MovementSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\StaticMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:StaticMesh.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\MovementSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:MovementSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\VBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:VBO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\InputSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:InputSystem.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\StaticMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:StaticMesh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\InputSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:InputSystem.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:VAO.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\VAO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{879BC50A-DB1E-4CCB-B201-48EA098727CA}|PersonalEngineProject.vcxproj|solutionrelative:VAO.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,58 +42,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MovementSystem.cpp",
-              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\MovementSystem.cpp",
-              "RelativeDocumentMoniker": "MovementSystem.cpp",
-              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\MovementSystem.cpp",
-              "RelativeToolTip": "MovementSystem.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "VAO.cpp",
+              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\VAO.cpp",
+              "RelativeDocumentMoniker": "VAO.cpp",
+              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\VAO.cpp",
+              "RelativeToolTip": "VAO.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-17T19:14:18.071Z",
+              "WhenOpened": "2025-03-17T20:28:06.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VAO.h",
+              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\VAO.h",
+              "RelativeDocumentMoniker": "VAO.h",
+              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\VAO.h",
+              "RelativeToolTip": "VAO.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-17T19:53:30.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\Shader.cpp",
+              "RelativeDocumentMoniker": "Shader.cpp",
+              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\Shader.cpp",
+              "RelativeToolTip": "Shader.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-17T19:59:42.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Shader.h",
+              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\Shader.h",
+              "RelativeDocumentMoniker": "Shader.h",
+              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\Shader.h",
+              "RelativeToolTip": "Shader.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-17T19:53:34.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StaticMesh.h",
+              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\StaticMesh.h",
+              "RelativeDocumentMoniker": "StaticMesh.h",
+              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\StaticMesh.h",
+              "RelativeToolTip": "StaticMesh.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-17T19:52:00.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MovementSystem.h",
-              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\MovementSystem.h",
-              "RelativeDocumentMoniker": "MovementSystem.h",
-              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\MovementSystem.h",
-              "RelativeToolTip": "MovementSystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-17T19:06:20.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InputSystem.cpp",
-              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\InputSystem.cpp",
-              "RelativeDocumentMoniker": "InputSystem.cpp",
-              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\InputSystem.cpp",
-              "RelativeToolTip": "InputSystem.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "StaticMesh.cpp",
+              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\StaticMesh.cpp",
+              "RelativeDocumentMoniker": "StaticMesh.cpp",
+              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\StaticMesh.cpp",
+              "RelativeToolTip": "StaticMesh.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-17T17:56:34.954Z",
+              "WhenOpened": "2025-03-17T20:03:02.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "InputSystem.h",
-              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\InputSystem.h",
-              "RelativeDocumentMoniker": "InputSystem.h",
-              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\InputSystem.h",
-              "RelativeToolTip": "InputSystem.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-17T17:29:53.246Z",
+              "DocumentIndex": 2,
+              "Title": "VBO.cpp",
+              "DocumentMoniker": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\VBO.cpp",
+              "RelativeDocumentMoniker": "VBO.cpp",
+              "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\VBO.cpp",
+              "RelativeToolTip": "VBO.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-17T20:09:52.335Z",
               "EditorCaption": ""
             },
             {
@@ -92,7 +140,7 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\mertt\\Desktop\\PersonalEngineProject\\PersonalEngineProject\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAF0AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAwFAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-11T17:35:42.56Z",
               "EditorCaption": ""

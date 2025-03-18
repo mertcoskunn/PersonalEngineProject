@@ -17,6 +17,7 @@ void VAO::LinkAttrib(VBO VBO, GLuint layout, GLuint numComponents, GLenum type, 
 
 void VAO::Bind() {
 	glBindVertexArray(ID);
+	
 }
 
 
