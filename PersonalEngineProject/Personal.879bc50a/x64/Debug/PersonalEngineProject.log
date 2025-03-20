@@ -1,5 +1,2 @@
-﻿  main.cpp
-  ActorObject.cpp
-C:\Users\mertt\Desktop\PersonalEngineProject\PersonalEngineProject\ActorObject.cpp(11,11): warning C4305: '=': truncation from 'double' to 'GLfloat'
-  Generating Code...
+﻿  StaticMesh.cpp
   PersonalEngineProject.vcxproj -> C:\Users\mertt\Desktop\PersonalEngineProject\PersonalEngineProject\x64\Debug\PersonalEngineProject.exe

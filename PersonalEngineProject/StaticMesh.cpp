@@ -27,6 +27,8 @@ StaticMesh::StaticMesh(const char* vertex_file, const char* fragment_file, GLflo
 	_vbo.Unbind();
 
 	_uniformId = glGetUniformLocation(_shader.getID(), "deltaMov");
+
+	//_model = glm::mat4(1.0f);
 }
 
 

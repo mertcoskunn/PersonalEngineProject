@@ -4,7 +4,7 @@
 #include"Shader.h"
 #include"VAO.h"
 #include"VBO.h"
-
+#include<glm/glm.hpp>
 
 class StaticMesh {
 
@@ -27,8 +27,13 @@ private:
 	bool _isVisible; 
 	GLfloat* _initVertices;
 	GLfloat* _deltaLocation;
+	glm::vec3 worldPosition; 
+
 	int _vertexCount; 
-	unsigned int _uniformId; 
+	unsigned int _uniformId;
+
+
+	//glm::mat4 _model;
 };
 
 #endif 
