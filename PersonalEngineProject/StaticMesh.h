@@ -19,9 +19,11 @@ public:
 	void setIsVisible(bool newVisible) { _isVisible = newVisible;  };
 	bool getIsVisible() { return _isVisible; };
 
-	//void AddLocation(GLfloat dx, GLfloat dy);
-	GLfloat* getCurrentVertexLocation();
+	void addLocation(glm::vec3 deltaLoc);
+	void setWorldLocation(glm::vec3 newLoc);
 
+	glm::vec3 getWorldLocation();
+	glm::mat4 getModelMatrix(); 
 	
 private:
 	Shader _shader;
@@ -31,12 +33,11 @@ private:
 	GLfloat* _initVertices;
 	//GLfloat* _deltaLocation;
 	
-	glm::vec3 _worldPosition; 
+	glm::vec3 _worldLocation; 
 	int _vertexCount;
 	Camera& _camera; 
 
 
-	glm::mat4 _model;
 };
 
 #endif 

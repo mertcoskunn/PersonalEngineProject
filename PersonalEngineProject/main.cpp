@@ -18,7 +18,7 @@
 #include"InputSystem.h"
 #include"MovementSystem.h"
 #include"StaticMesh.h"
-#include"ActorObject.h"
+#include"Pawn.h"
 #include"Camera.h"
 
 
@@ -33,9 +33,15 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 
 GLfloat vertices[] = {
--0.2f, -0.2f, 0.0f,
-0.2f, -0.2f, 0.0f,
-0.0f, 0.2f, 0.0f
+-0.1f, -0.1f, 0.0f,
+0.1f, -0.1f, 0.0f,
+0.0f, 0.1f, 0.0f
+};
+
+GLfloat vertices2[] = {
+-0.5f, -0.5f, 0.0f,
+0.5f, -0.5f, 0.0f,
+0.0f, 0.5f, 0.0f
 };
 
 
@@ -89,36 +95,25 @@ int main() {
 
 	
 	Camera camera(camPosition, lookAtPos);
-	ActorObject testObject(glm::vec3(0.0f, 0.0f, 0.0f),"default.vert", "default.frag", vertices, sizeof(vertices) / sizeof(vertices[0]),inputs,camera);
+	Pawn pawn(glm::vec3(0.0f, 0.0f, 0.0f),"default.vert", "default.frag", vertices, sizeof(vertices) / sizeof(vertices[0]),inputs,camera);
 	
+	StaticMesh testMesh(glm::vec3(0.0f, 0.0f, 0.0f), "default.vert", "red.frag", vertices2, sizeof(vertices2) / sizeof(vertices2[0]), camera);
 
 	
-	/*
-	std::vector<int> keys = {GLFW_KEY_W, GLFW_KEY_S, GLFW_KEY_A, GLFW_KEY_D};
-
-	InputSystem inputs(keys);
-	inputs.setIsEnabled(true);
-	inputs.setupKeyInputs(window);
-
-
-	MovementSystem movementInputs(&inputs); 
 	
-	std::vector<int> mov = { 0,0,0,0 };
-	*/
 
 	while (!glfwWindowShouldClose(window)) {
 		
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-
-		testObject.Activate();
+		pawn.Activate();
+		testMesh.drawMesh();
 		glfwSwapBuffers(window);
 		glfwPollEvents();
-
 	}
 
-	testObject.Deactivate();
+	pawn.Deactivate();
 	glfwTerminate();
 	return 0; 
 
