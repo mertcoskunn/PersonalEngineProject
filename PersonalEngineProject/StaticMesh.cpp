@@ -3,15 +3,16 @@
 
 
 
-StaticMesh::StaticMesh(const char* vertex_file, const char* fragment_file, GLfloat* vertices, int vertex_count)
+StaticMesh::StaticMesh(glm::vec3 worldPosition, const char* vertex_file, const char* fragment_file, GLfloat* vertices, int vertex_count, Camera& camera)
 	:
 	_shader(vertex_file, fragment_file),
 	_vao(),
-	_vbo(vertices, vertex_count * sizeof(GLfloat))
+	_vbo(vertices, vertex_count * sizeof(GLfloat)),
+	_camera(camera) 
 	{
 
 	_initVertices = new GLfloat[vertex_count]; 
-	_deltaLocation = new GLfloat[2]{ 0.0, 0.0 };
+	//_deltaLocation = new GLfloat[2]{ 0.0, 0.0 };
 	_vertexCount = vertex_count;
 
 	for (int i = 0; i < vertex_count; i++) {
@@ -26,9 +27,9 @@ StaticMesh::StaticMesh(const char* vertex_file, const char* fragment_file, GLflo
 	_vao.Unbind();
 	_vbo.Unbind();
 
-	_uniformId = glGetUniformLocation(_shader.getID(), "deltaMov");
-
-	//_model = glm::mat4(1.0f);
+	_worldPosition = worldPosition;
+	_model = glm::mat4(1.0f);
+	_model = glm::translate(_model, _worldPosition);
 }
 
 
@@ -45,7 +46,18 @@ void StaticMesh::drawMesh() {
 	if (_isVisible) {
 		_shader.Activate();
 
-		glUniform2fv(_uniformId,1, _deltaLocation);
+		//glUniform2fv(_shader.getID(), 1, _deltaLocation);
+		/*
+		glUniformMatrix4fv(_shader.getModelUniformID(), 1, GL_FALSE, glm::value_ptr(_model));
+		glUniformMatrix4fv(_shader.getViewUniformID(), 1, GL_FALSE, glm::value_ptr(_camera.getViewMatrix()));
+		glUniformMatrix4fv(_shader.getProjectionUniformID(), 1, GL_FALSE, glm::value_ptr(_camera.getProjectionMatrix()));
+		*/
+
+		glUniformMatrix4fv(_shader.getModelUniformID(), 1, GL_FALSE, glm::value_ptr(_model));
+		glUniformMatrix4fv(_shader.getViewUniformID(), 1, GL_FALSE, glm::value_ptr(_camera.getViewMatrix()));
+		//glUniformMatrix4fv(_shader.getViewUniformID(), 1, GL_FALSE, glm::value_ptr(_model));
+		glUniformMatrix4fv(_shader.getProjectionUniformID(), 1, GL_FALSE, glm::value_ptr(_camera.getProjectionMatrix()));
+		//glUniformMatrix4fv(_shader.getProjectionUniformID(), 1, GL_FALSE, glm::value_ptr(_model));
 
 		_vao.Bind();
 		glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -66,18 +78,19 @@ void StaticMesh::deleteRefs() {
 }
 
 
-
+/*
 void StaticMesh::AddLocation(GLfloat dx, GLfloat dy) {
 
 	_deltaLocation[0] += dx; 
 	_deltaLocation[1] += dy; 
 
 }
-
+*/
 
 GLfloat* StaticMesh::getCurrentVertexLocation() {
 	GLfloat* currVertex = new GLfloat[_vertexCount];
 
+	/*
 	for (int i = 0; i < _vertexCount; i++) {
 
 		if ((i == 0) or (i == 3) or (i == 6)) {
@@ -91,7 +104,8 @@ GLfloat* StaticMesh::getCurrentVertexLocation() {
 		}
 		
 	}
-
-	return currVertex;
+	*/ 
+	return _initVertices;
+	//return currVertex;
 };
 

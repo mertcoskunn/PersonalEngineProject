@@ -4,12 +4,13 @@
 
 #include "StaticMesh.h"
 #include "MovementSystem.h"
+#include "Camera.h"
 
 
 class ActorObject {
 
 public:
-	ActorObject(const char* vertex_file, const char* fragment_file, GLfloat* vertices, int vertex_count, InputSystem& inputs);
+	ActorObject(glm::vec3 worldPosition, const char* vertex_file, const char* fragment_file, GLfloat* vertices, int vertex_count, InputSystem& inputs, Camera& camera);
 
 	void Activate(); 
 	void Show();

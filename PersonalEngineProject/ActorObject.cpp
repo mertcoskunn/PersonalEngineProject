@@ -1,9 +1,9 @@
 #include "ActorObject.h"
 
 
-ActorObject::ActorObject(const char* vertex_file, const char* fragment_file, GLfloat* vertices, int vertex_count, InputSystem& inputs)
+ActorObject::ActorObject(glm::vec3 worldPosition, const char* vertex_file, const char* fragment_file, GLfloat* vertices, int vertex_count, InputSystem& inputs, Camera& camera)
 	:
-	_staticMesh(vertex_file, fragment_file, vertices, vertex_count),
+	_staticMesh(worldPosition, vertex_file, fragment_file, vertices, vertex_count, camera),
 	_movSystem(inputs)
 {
 
@@ -36,9 +36,11 @@ void ActorObject::Activate() {
 }
 
 
-void ActorObject::AddLocation() {
-	
-	std::vector<int> movDirect = _movSystem.getMovementDirections();
-	_staticMesh.AddLocation((movDirect[3] - movDirect[2])* _speed, (movDirect[0] - movDirect[1]) * _speed);
 
+void ActorObject::AddLocation() {
+
+	/*
+	std::vector<int> movDirect = _movSystem.getMovementDirections();
+	//_staticMesh.AddLocation((movDirect[3] - movDirect[2])* _speed, (movDirect[0] - movDirect[1]) * _speed);
+	*/
 }

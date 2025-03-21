@@ -22,6 +22,7 @@ class Camera {
 
 		
 		glm::mat4 getViewMatrix();
+		glm::mat4 getProjectionMatrix();
 
 	private:
 		void updateDirectionVectors(); 
@@ -33,7 +34,11 @@ class Camera {
 		glm::vec3 _forward; 
 		glm::vec3 _up; 
 		glm::vec3 _right;
+		
+		float _fov;
+
 		glm::mat4 _view;
+		glm::mat4 _projection;
 
 		float _yaw;
 		float _pitch;

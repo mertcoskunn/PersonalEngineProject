@@ -19,6 +19,7 @@
 #include"MovementSystem.h"
 #include"StaticMesh.h"
 #include"ActorObject.h"
+#include"Camera.h"
 
 
 
@@ -70,7 +71,8 @@ int main() {
 	glViewport(0, 0, windowWidth, windowHeight);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback); 
 	
-	
+	glEnable(GL_DEPTH_TEST);
+
 
 	/*
 	StaticMesh mesh("default.vert", "default.frag", vertices, sizeof(vertices)/sizeof(vertices[0]));
@@ -84,7 +86,14 @@ int main() {
 	inputs.setIsEnabled(true);
 	inputs.setupKeyInputs(window);
 	
-	ActorObject testObject("default.vert", "default.frag", vertices, sizeof(vertices) / sizeof(vertices[0]),inputs);
+
+	
+	glm::vec3 camPosition = glm::vec3(0.0f, 0.0f, 3.0f);
+	glm::vec3 lookAtPos = glm::vec3(0.0f, 0.0f, 0.0f);
+
+	
+	Camera camera(camPosition, lookAtPos);
+	ActorObject testObject(glm::vec3(0.0f, 0.0f, 0.0f),"default.vert", "default.frag", vertices, sizeof(vertices) / sizeof(vertices[0]),inputs,camera);
 	
 
 	
@@ -104,8 +113,8 @@ int main() {
 	while (!glfwWindowShouldClose(window)) {
 		
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
-		
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 
 		testObject.Activate();
 		//mesh.drawMesh();

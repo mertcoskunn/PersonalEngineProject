@@ -5,18 +5,21 @@
 #include"VAO.h"
 #include"VBO.h"
 #include<glm/glm.hpp>
+#include<glm/gtc/matrix_transform.hpp>
+#include<glm/gtc/type_ptr.hpp>
+#include"Camera.h" 
 
 class StaticMesh {
 
 public:
-	StaticMesh(const char* vertex_file, const char* fragment_file, GLfloat* vertices, int vertex_count);
+	StaticMesh(glm::vec3 worldPosition,const char* vertex_file, const char* fragment_file, GLfloat* vertices, int vertex_count, Camera& camera);
 	void setShader(Shader newShader);
 	void drawMesh();
 	void deleteRefs();
 	void setIsVisible(bool newVisible) { _isVisible = newVisible;  };
 	bool getIsVisible() { return _isVisible; };
 
-	void AddLocation(GLfloat dx, GLfloat dy);
+	//void AddLocation(GLfloat dx, GLfloat dy);
 	GLfloat* getCurrentVertexLocation();
 
 	
@@ -26,14 +29,14 @@ private:
 	VBO _vbo;
 	bool _isVisible; 
 	GLfloat* _initVertices;
-	GLfloat* _deltaLocation;
-	glm::vec3 worldPosition; 
+	//GLfloat* _deltaLocation;
+	
+	glm::vec3 _worldPosition; 
+	int _vertexCount;
+	Camera& _camera; 
 
-	int _vertexCount; 
-	unsigned int _uniformId;
 
-
-	//glm::mat4 _model;
+	glm::mat4 _model;
 };
 
 #endif 

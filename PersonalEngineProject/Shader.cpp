@@ -54,6 +54,12 @@ Shader::Shader(const char* vertex_file, const char* fragment_file) {
 
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
+
+	_modelLoc = glGetUniformLocation(ID, "model");
+	_viewLoc = glGetUniformLocation(ID, "view");
+	_projectionLoc = glGetUniformLocation(ID, "projection");
+
+	
 	
 }
 

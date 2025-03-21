@@ -7,12 +7,20 @@ Camera::Camera(glm::vec3 position, glm::vec3 lookAtPos) {
 
 	_position = position; 
 	_lookAtPos = lookAtPos; 
-	_forward = glm::normalize(_position - _lookAtPos);
+	//_forward = glm::normalize( _position - _lookAtPos);
+	_forward = glm::normalize(_lookAtPos - _position);
 	_up = glm::vec3(0.0f, 1.0f, 0.0f);
 	_right = glm::normalize(glm::cross(_up, _forward));
 	_up = glm::normalize(glm::cross(_forward, _right));
-	_view = glm::lookAt(_position, _position+_forward, _up);
 
+	_fov = 45.0f; 
+	_view = glm::mat4(1.0f);
+	_view = glm::lookAt(_position, _position+_forward, _up);
+	//_view = glm::lookAt(glm::vec3(0.0f, 0.0f, -5.0f), glm::vec3(0.0f, 0.0f, -5.0f)+_forward, _up);
+	//_view = glm::translate(_view, glm::vec3(0.0f, 0.0f, -5.0f)); 
+
+	//_projection = glm::perspective(glm::radians(_fov), 800.0f / 600.0f, 0.1f, 100.0f);
+	_projection = glm::perspective(glm::radians(45.0f), 800.0f / 600.0f, 0.1f, 100.0f);
 	_yaw = -90.0f; 
 	_pitch = 0.0f; 
 	_roll = 0.0f; 
@@ -69,4 +77,8 @@ void Camera::updateViewMatrix() {
 
 glm::mat4 Camera::getViewMatrix() {
 	return _view; 
+}
+
+glm::mat4 Camera::getProjectionMatrix() {
+	return _projection;
 }
