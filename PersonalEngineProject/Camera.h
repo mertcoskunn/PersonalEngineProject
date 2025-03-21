@@ -39,7 +39,6 @@ class Camera {
 		glm::vec3 _right;
 		
 		float _fov;
-
 		glm::mat4 _projection;
 
 		float _yaw;

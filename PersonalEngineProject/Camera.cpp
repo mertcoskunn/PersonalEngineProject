@@ -21,8 +21,6 @@ Camera::Camera(glm::vec3 position, glm::vec3 lookAtPos) {
 
 void Camera::setLocation(glm::vec3 newPos) {
 	_location = newPos;
-	//updateDirectionVectors();
-
 }
 
 
@@ -39,7 +37,7 @@ void Camera::addLocation(glm::vec3 deltaLoc) {
 	setLocation(getLocation() + deltaLoc); 
 }
 
-//every time when you update _location and _lookAt, you have to call updateDirectionVectors()
+//every time when you update _lookAt, you have to call updateDirectionVectors()
 void Camera::updateDirectionVectors() {
 	_forward = glm::normalize(_lookAtLoc - _location);
 	_up = glm::vec3(0.0f, 1.0f, 0.0f);

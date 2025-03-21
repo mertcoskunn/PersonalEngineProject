@@ -31,8 +31,7 @@ private:
 	VBO _vbo;
 	bool _isVisible; 
 	GLfloat* _initVertices;
-	//GLfloat* _deltaLocation;
-	
+
 	glm::vec3 _worldLocation; 
 	int _vertexCount;
 	Camera& _camera; 

@@ -28,9 +28,6 @@ private:
 	GLfloat _speed; 
 	int _vertexCount;
 
-	
-
-
 }; 
 
 #endif
