@@ -12,10 +12,12 @@ class ActorObject {
 public:
 	ActorObject(glm::vec3 worldPosition, const char* vertex_file, const char* fragment_file, GLfloat* vertices, int vertex_count, InputSystem& inputs, Camera& camera);
 
-	void Activate(); 
+	void Activate();
+	void Deactivate(); 
 	void Show();
 	void Hide();
 	void AddLocation();
+
 	
 
 private: 

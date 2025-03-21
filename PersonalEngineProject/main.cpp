@@ -74,10 +74,6 @@ int main() {
 	glEnable(GL_DEPTH_TEST);
 
 
-	/*
-	StaticMesh mesh("default.vert", "default.frag", vertices, sizeof(vertices)/sizeof(vertices[0]));
-	mesh.drawMesh();
-	*/
 	
 	
 	std::vector<int> keys = { GLFW_KEY_W, GLFW_KEY_S, GLFW_KEY_A, GLFW_KEY_D };
@@ -117,14 +113,12 @@ int main() {
 
 
 		testObject.Activate();
-		//mesh.drawMesh();
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 
 	}
 
-	//mesh.deleteRefs();
-
+	testObject.Deactivate();
 	glfwTerminate();
 	return 0; 
 

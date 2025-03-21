@@ -36,6 +36,11 @@ void ActorObject::Activate() {
 }
 
 
+void ActorObject::Deactivate() {
+
+	_staticMesh.deleteRefs();
+}
+
 
 void ActorObject::AddLocation() {
 
