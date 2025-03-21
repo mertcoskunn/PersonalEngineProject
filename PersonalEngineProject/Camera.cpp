@@ -8,7 +8,7 @@ Camera::Camera(glm::vec3 position, glm::vec3 lookAtPos) {
 	_location = position; 
 	_lookAtLoc = lookAtPos;
 	
-	updateDirectionVectors();
+	updateForwardVector();
 
 	_fov = 45.0f; 
 	_projection = glm::perspective(glm::radians(_fov), 800.0f / 600.0f, 0.1f, 100.0f);
@@ -27,7 +27,7 @@ void Camera::setLocation(glm::vec3 newPos) {
 void Camera::setLookAtLocation(glm::vec3 newPos) {
 
 	_lookAtLoc = newPos;
-	updateDirectionVectors();
+	updateForwardVector();
 
 }
 
@@ -38,11 +38,8 @@ void Camera::addLocation(glm::vec3 deltaLoc) {
 }
 
 //every time when you update _lookAt, you have to call updateDirectionVectors()
-void Camera::updateDirectionVectors() {
+void Camera::updateForwardVector() {
 	_forward = glm::normalize(_lookAtLoc - _location);
-	_up = glm::vec3(0.0f, 1.0f, 0.0f);
-	_right = glm::normalize(glm::cross(_up, _forward));
-	_up = glm::normalize(glm::cross(_forward, _right));
 }
 
 
@@ -64,16 +61,12 @@ void Camera::addRotation(float deltaYaw, float deltaPitch, float deltaRoll) {
 
 
 	_forward = glm::normalize(tempDirection);
-	//This part might be function, I am not sure. 
-	_up = glm::vec3(0.0f, 1.0f, 0.0f);
-	_right = glm::normalize(glm::cross(_up, _forward));
-	_up = glm::normalize(glm::cross(_forward, _right));
 
 }
 
 
 glm::mat4 Camera::getViewMatrix() {
-	return glm::lookAt(_location, _location + _forward, _up);
+	return glm::lookAt(_location, _location + getForwardVector(), getUpVector());
 }
 
 glm::mat4 Camera::getProjectionMatrix() {
@@ -91,10 +84,10 @@ glm::vec3 Camera::getForwardVector() {
 }
 
 glm::vec3 Camera::getRightVector() {
-	return _right;
+	return glm::normalize(glm::cross(glm::vec3(0.0f, 1.0f, 0.0f), _forward));
 }
 
 
 glm::vec3 Camera::getUpVector() {
-	return _up;
+	return glm::normalize(glm::cross(getForwardVector(), getRightVector()));
 }

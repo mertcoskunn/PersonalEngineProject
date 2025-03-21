@@ -9,6 +9,11 @@ MovementSystem::MovementSystem(InputSystem& inputs):_inputs(inputs) {
 }
 
 
+std::vector<float> MovementSystem::getMouseCoordinates() {
+
+	return _inputs.getMouseCoordinates();
+}
+
 
 std::vector<int> MovementSystem::getMovementDirections() {
 

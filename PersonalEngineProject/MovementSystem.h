@@ -10,10 +10,12 @@ public:
 	std::vector<int> getMovementDirections(); 
 	bool getIsEnabled() const { return _isEnabled; }; 
 	void setIsEnabled(bool val) { _isEnabled = val; };
+	std::vector<float> getMouseCoordinates();
 
 private: 
 	bool _isEnabled;
 	InputSystem& _inputs; 
+	
 };
 
 #endif 

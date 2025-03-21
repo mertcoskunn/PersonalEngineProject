@@ -29,7 +29,7 @@ const char windowName[] = "MainWindow";
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height); 
-
+void esc_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
 
 GLfloat vertices[] = {
@@ -80,13 +80,14 @@ int main() {
 	glEnable(GL_DEPTH_TEST);
 
 
-	
+	glfwSetKeyCallback(window, esc_key_callback);
 	
 	std::vector<int> keys = { GLFW_KEY_W, GLFW_KEY_S, GLFW_KEY_A, GLFW_KEY_D };
 
 	InputSystem inputs(keys);
 	inputs.setIsEnabled(true);
 	inputs.setupKeyInputs(window);
+	inputs.setupMouseInputs(window);
 	
 
 	
@@ -132,3 +133,8 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 
 
 
+void esc_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+	if (key == GLFW_KEY_W && action == GLFW_PRESS) {
+		glfwSetWindowShouldClose(window, true); // Pencereyi kapat
+	}
+}

@@ -17,6 +17,7 @@ public:
 	void Show();
 	void Hide();
 	void AddLocation();
+	void updateDirection(); 
 
 	
 
@@ -27,6 +28,12 @@ private:
 	
 	GLfloat _speed; 
 	int _vertexCount;
+
+
+	float _prevMouseX; 
+	float _prevMouseY;
+	float _distance; 
+	float _sensitivity;
 
 }; 
 

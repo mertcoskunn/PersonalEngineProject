@@ -4,6 +4,8 @@
 
 
 std::vector<InputSystem*> InputSystem::_instances ;  
+float InputSystem::_xPosMouse;
+float InputSystem::_yPosMouse;
 
 InputSystem::InputSystem(std::vector<int> userKeys) {
 
@@ -11,8 +13,12 @@ InputSystem::InputSystem(std::vector<int> userKeys) {
 
 		_keys[key] = false;
 	}
+	_xPosMouse = 0.0f;
+	_yPosMouse = 0.0f;
 
-	InputSystem::_instances.push_back(this); 
+	InputSystem::_instances.push_back(this);
+
+	
 }
 
 
@@ -45,12 +51,30 @@ void InputSystem::setIsKeyDown(int key, bool isDown) {
 
 
 void InputSystem::setupKeyInputs(GLFWwindow* window) {
-	glfwSetKeyCallback(window, callback);
+	glfwSetKeyCallback(window, keyboardCallback);
 
 }
 
-void InputSystem::callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+void InputSystem::setupMouseInputs(GLFWwindow* window) {
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+	glfwSetCursorPosCallback(window, mouseCallback);
+
+}
+
+void InputSystem::keyboardCallback(GLFWwindow* window, int key, int scancode, int action, int mods) {
 	for (InputSystem* input : _instances) {
 		input->setIsKeyDown(key, action != GLFW_RELEASE);
 	}
+}
+
+
+void InputSystem::mouseCallback(GLFWwindow* window, double xpos, double ypos) {
+	_xPosMouse = static_cast<float>(xpos);
+	_yPosMouse = static_cast<float>(ypos);
+}
+
+std::vector<float> InputSystem::getMouseCoordinates() {
+
+	std::vector<float> coordinates = {_xPosMouse, _yPosMouse };
+	return coordinates;
 }
